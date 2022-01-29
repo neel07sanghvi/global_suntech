@@ -1,38 +1,103 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+p {
+  margin: 0;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.container {
+  height: 100%;
+  width: 80%;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.upper {
+  height: 48%;
+  width: 90%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-top: 1%;
 }
 
-.App-link {
-  color: #61dafb;
+.details {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.image {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image > img {
+  height: 90%;
+  width: 100%;
+}
+
+.lower {
+  height: 48%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+.video {
+  height: 100%;
+  width: 100%;
+}
+
+.video > video {
+  height: 100%;
+  width: 100%;
+}
+
+.loading {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .upper {
+    width: 100%;
+  }
+  .details {
+    width: 60%;
+  }
+  .image {
+    width: 40%;
+  }
+  .image > img {
+    height: 50%;
+    width: 100%;
   }
 }
