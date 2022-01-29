@@ -6,9 +6,9 @@ function App() {
   const [image, setImage] = useState({});
   const [video, setVideo] = useState([]);
 
-  const dashboardURL = "https://tolltax.xyz/demoapi/dashboard";
-  const imageURL = "https://tolltax.xyz/demoapi/get_file";
-  const videoURL = "https://tolltax.xyz/demoapi/get_videoclip";
+  const dashboardURL = process.env.React_App_dashboardURL;
+  const imageURL = process.env.React_App_imageURL;
+  const videoURL = process.env.React_App_videoURL;
 
   const requestBodyDataDashboard = {
     licence_plate: "",
@@ -62,7 +62,6 @@ function App() {
     let temp = video;
     temp[key] = videObjectURL;
     setVideo({ ...video, temp });
-    console.log(video);
   };
 
   useEffect(() => {
